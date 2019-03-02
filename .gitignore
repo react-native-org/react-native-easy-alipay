@@ -1,3 +1,8 @@
+# Custom
+
+.project
+.settings/
+
 # Built application files
 *.apk
 *.ap_

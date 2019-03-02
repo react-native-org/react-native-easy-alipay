@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+
+
+
+def getConfigFromRoot(key, defaultValue) {
+    def _ext = rootProject.ext;
+    return _ext.has(key) ? _ext.get(key) : defaultValue
+}
+
+android {
+    compileSdkVersion getConfigFromRoot('compileSdkVersion', 26)
+
+    defaultConfig {
+        minSdkVersion 25
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            postprocessing {
+                removeUnusedCode false
+                removeUnusedResources false
+                obfuscate false
+                optimizeCode false
+                proguardFile 'proguard-rules.pro'
+            }
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'])
+}
