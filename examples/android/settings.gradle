@@ -2,6 +2,6 @@ rootProject.name = 'examples'
 
 include ':app'
 
-//include ':react-native-easy-alipay'
+include ':react-native-easy-alipay'
 //project(':react-native-easy-alipay').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-easy-alipay/android')
-//project(':react-native-easy-alipay').projectDir = new File(rootProject.projectDir, '../../android')
+project(':react-native-easy-alipay').projectDir = new File(rootProject.projectDir, '../../android')
