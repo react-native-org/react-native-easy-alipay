@@ -8,7 +8,8 @@
  */
 
 import React, { Component } from 'react';
-import { NativeModules, Platform, StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
+import RNEasyAlipay from 'react-native-easy-alipay';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -19,7 +20,7 @@ export default class App extends Component {
   state = { val: 0 };
 
   componentDidMount() {
-    NativeModules.RNEasyAlipay.test('666').then(val => {
+    RNEasyAlipay.test('666').then(val => {
       this.setState({ val });
     });
   }

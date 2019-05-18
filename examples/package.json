@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "dep": "cd ../ && npm pack && cd examples && npm i ../react-native-easy-alipay-0.0.1.tgz",
     "start": "node node_modules/react-native/local-cli/cli.js start --port=8001",
     "test": "jest"
   },
@@ -15,6 +16,7 @@
     "babel-jest": "24.1.0",
     "jest": "24.1.0",
     "metro-react-native-babel-preset": "0.53.0",
+    "react-native-easy-alipay": "file:../react-native-easy-alipay-0.0.1.tgz",
     "react-test-renderer": "16.6.3"
   },
   "jest": {

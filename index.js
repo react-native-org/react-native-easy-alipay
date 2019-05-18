@@ -9,7 +9,7 @@ class EasyAlipay {
   }
 
   test() {
-    console.log('222');
+    return this.RNEasyAlipay.test('999');
   }
 }
 
